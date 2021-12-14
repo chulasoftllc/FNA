@@ -354,12 +354,11 @@ namespace Microsoft.Xna.Framework.Graphics
 				{
 					for (int i = 0; i < levels; i += 1)
 					{
-						int mipLevelSize = Texture.CalculateDDSLevelSize(
+						tex = reader.ReadBytes(Texture.CalculateDDSLevelSize(
 							width >> i,
 							width >> i,
 							format
-						);
-						tex = reader.ReadBytes(mipLevelSize);
+						));
 						result.SetData(
 							(CubeMapFace) face,
 							i,
