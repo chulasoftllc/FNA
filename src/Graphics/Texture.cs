@@ -163,18 +163,10 @@ namespace Microsoft.Xna.Framework.Graphics
 			}
 			else
 			{
-				int blockSize = 0;
+				int blockSize = 16;
 				if (format == SurfaceFormat.Dxt1)
 				{
 					blockSize = 8;
-				}
-				else if (format == SurfaceFormat.Dxt3)
-				{
-					blockSize = 16;
-				}
-				else if (format == SurfaceFormat.Dxt5)
-				{
-					blockSize = 16;
 				}
 				width = Math.Max(width, 1);
 				height = Math.Max(height, 1);
